@@ -187,7 +187,7 @@ bot(
       return await message.send(lang.plugins.page.not_found)
     if (isNaN(match)) return await message.send(lang.plugins.page.usage)
     await message.reply_message.downloadAndSaveMediaMessage(`./pdf/${match}`)
-    return await message.send(lang.plugins.page.add(match))
+    return await message.send(lang.plugins.page.add.format(match))
   }
 )
 
@@ -325,7 +325,7 @@ bot(
     return await message.send(
       await getFfmpegBuffer(
         await message.reply_message.downloadAndSaveMediaMessage('histo'),
-        'histo.mp4',
+        'ohisto.mp4',
         'histo'
       ),
       { mimetype: 'video/mp4', quoted: message.data },
@@ -346,7 +346,7 @@ bot(
     return await message.send(
       await getFfmpegBuffer(
         await message.reply_message.downloadAndSaveMediaMessage('vector'),
-        'vector.mp4',
+        'ovector.mp4',
         'vector'
       ),
       { mimetype: 'video/mp4', quoted: message.data },
@@ -439,7 +439,7 @@ bot(
     return await message.send(
       await getFfmpegBuffer(
         await message.reply_message.downloadAndSaveMediaMessage('avec'),
-        'avec.mp4',
+        'oavec.mp4',
         'avec'
       ),
       { mimetype: 'video/mp4', quoted: message.data },
